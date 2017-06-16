@@ -1,0 +1,17 @@
+<h2 class="content-subhead">Search</h2>
+
+<form action="/search" method="get">
+  <input name="query" value="<%= params[:query] %>">
+  <button type="submit">Search</button>
+</form>
+
+<h2>Results for <%= "'#{params[:query]}'" %></h2>
+
+
+<% unless params[:query].nil? %>
+	<ul>
+		<% @successful_request_chapters.each do |chap_number| %>
+			<li><a href="chapters/<%= chap_number %>"><%= @contents[chap_number.to_i - 1] %></a></li>
+		<% end %>
+	</ul>
+	<% end %>

@@ -9,9 +9,13 @@
 
 
 <% unless params[:query].nil? %>
-	<ul>
 		<% @successful_request_chapters.each do |chap_number| %>
-			<li><a href="chapters/<%= chap_number %>"><%= @contents[chap_number.to_i - 1] %></a></li>
+			<h3><%= @contents[chap_number.to_i - 1] %></h3>
+      <% matching_paragraphs(chap_number, params[:query]).each do |paragraph| %>
+      <% index = find_index(paragraph, chap_number) %>
+        <a href="chapters/<%= chap_number %>#paragraph<%=index%>"><%= highlight(paragraph, params[:query]) %></a>
+        <br></br>
+      <% end %>
 		<% end %>
-	</ul>
+
 	<% end %>

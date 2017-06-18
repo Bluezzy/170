@@ -12,6 +12,10 @@ helpers do
 	def in_paragraphs(text)
 		text.split("\n\n")
 	end
+
+  def highlight(text, term)
+    text.gsub(term, %(<strong>#{term}</strong>))
+  end
 end
 
 not_found do
@@ -48,6 +52,24 @@ def matching_chapters(any_word)
 		end
 	end
 	selected_chapters
+end
+
+def matching_paragraphs(chapter_number, query)
+  result = []
+  content = File.read("data/chp#{chapter_number}.txt")
+  paragraphs = in_paragraphs(content)
+  paragraphs.each do |paragraph|
+    result << paragraph if paragraph.include?(query)
+  end
+  result
+end
+
+def find_index(any_paragraph, any_chap_number)
+  content = File.read("data/chp#{any_chap_number}.txt")
+  in_paragraphs(content).each_with_index do |paragraph, index|
+    return index if paragraph == any_paragraph
+  end
+  0
 end
 
 

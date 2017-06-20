@@ -5,6 +5,7 @@ require "sinatra/content_for"
 
 require 'pry'
 
+
 configure do
 	enable :sessions
 	set :session_secret, 'secret'

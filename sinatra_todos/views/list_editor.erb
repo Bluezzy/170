@@ -1,0 +1,18 @@
+<ul>
+	<li><a href="/lists">Delete list</a></li>
+</ul>
+
+<form action="/lists/<%=params[:index]%>" method="post">
+	<d1>
+		<dt>
+			<label for="list_name">Enter the new list name:</label>
+		</dt>
+		<dd>
+			<input name="list_name" placeholder="List Name" type="text" value="<%= params[:list_name] || @list[:name] %>">
+		</dd>
+	</d1>
+	<fieldset class="actions">
+		<input type="submit" value="Save">
+		<a href="/lists/<%= params[:index] %>">Cancel</a>
+	</fieldset>
+</form>

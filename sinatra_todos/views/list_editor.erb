@@ -1,6 +1,14 @@
-<ul>
-	<li><a href="/lists">Delete list</a></li>
-</ul>
+<section id="todos">
+  <header>
+  	<h2>Editing "<%= @list[:name] %>"</h2>
+  	<ul>
+  		<li>
+  			<form action="/lists/<%=params[:index]%>/destroy" method="post">
+  				<button type="submit" class="delete">Delete List</button>
+  			</form>
+  	</ul>
+  </header>
+</section>
 
 <form action="/lists/<%=params[:index]%>" method="post">
 	<d1>

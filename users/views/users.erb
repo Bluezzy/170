@@ -1,0 +1,19 @@
+<ul>
+
+  <% @users.keys.each do |name| %>
+    <li><a style="font-size: 40px", href="/users/<%=name%>"><%=name.capitalize%></a></li>
+    <br></br>
+    <br></br>
+  <% end %>
+</ul>
+
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+<p>There are <strong><%=@nb_of_users%></strong> users with
+  <strong><%=@nb_of_interests%></strong> interests.</p>

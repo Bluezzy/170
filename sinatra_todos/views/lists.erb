@@ -9,7 +9,7 @@
   	<li>
   		<a href="lists/<%=index%>">
   			<h2><%= list[:name] %></h2>
-  		  <p> <%= list[:todos].count %></p>
+  		  <p> <%= count_completed(list[:todos]) %> / <%= list[:todos].count %></p>
   		</a>
     </li>
   <% end %>

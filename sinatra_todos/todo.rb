@@ -44,6 +44,10 @@ def error_for_todo(name)
   end
 end
 
+def count_completed(any_list)
+  any_list.select { |list| list[:completed] == true }.count
+end
+
 # Create a new list
 post "/lists" do
   list_name = params[:list_name].strip
@@ -143,6 +147,3 @@ post "/lists/:list_id/complete" do
   session[:success] = "All todos have been completed."
   redirect "/lists/#{@list_id}"
 end
-
-
-

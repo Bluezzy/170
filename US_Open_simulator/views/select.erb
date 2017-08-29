@@ -1,9 +1,0 @@
-<h1><%= session.delete(:message) %></h1>
-
-<form method="post" action="/select/<%= @id %>">
-	<% @players.each do |player| %>
-		<input type="radio" name ="SM<%=@id%>" value="<%= player %>"> <%= player %>
-		<br></br>
-	<% end %>
-		<input type="submit">
-</form>

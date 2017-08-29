@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<link rel="stylesheet" href="/stylesheets/simulator.css">
+<body>
+	<h1>Congratulations to <%=@winner%> for winning US Open 2017 !</h1>
+	<br></br>
+	<img src="<%=@picture_adress%>" />
+
+	<h2>Let's check his palmares after this outstanding performance !</h2>
+	<p>Gramd Slam Titles : <b><%= (@info["gs_titles"] + 1).to_s || "1"%></b></p>
+	<p>US Open Titles : <b><%= (@info["us_open_titles"] + 1).to_s || "1"%></b></p>
+	<p>Grand Slam Titles in 2017 : <b><%= (@info["gs_titles_in_2017"] + 1).to_s || "1"%></b></p>
+	<br></br>
+	<a href="/"><b>Start over</b></a>
+</body>
+</html>
+
+
+	

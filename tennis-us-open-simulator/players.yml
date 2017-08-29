@@ -1,0 +1,6 @@
+{
+1st_quarter: ["Rafael Nadal", "Grigor Dimitrov", "Tomas Berdych", "Gael Monfils"],
+2nd_quarter: ["Roger Federer", "Nick Kyrgios", "JM Del Potro", "Dominic Thiem"],
+3rd_quarter: ["Alexander Zverev", "John Isner", "Jack Sock", "Sam Querrey"],
+4th_quarter: ["Marin Cilic", "JW Tsonga", "Lucas Pouille", "Pablo Carreno Busta"]
+}
